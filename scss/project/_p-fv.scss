@@ -1,0 +1,79 @@
+@use "../global" as global;
+@use "../layout" as layout;
+
+.p-fv{
+    position: relative;
+    padding-bottom: 20px;
+    @include global.mq(tb) {
+    padding-bottom: 99.39px;
+    }
+}
+.p-fv__inner{
+    position: relative;
+    z-index: 100;
+    padding: 0;
+}
+.p-fv__title-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 80;
+    @include global.mq(tb) {
+        top: 97px;
+        left: 9%;
+    }
+}
+.p-fv__section-title{
+    color: #F45F5F;
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 21.3px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 4%;
+    @include global.mq(tb) {
+        font-size: 120px;
+        line-height: 1.13;
+        position: absolute;
+        letter-spacing: 17.3px;
+
+    }
+}
+.p-title-1{
+    width: 100%;
+    height: 145px;
+    @include global.mq(tb) {
+        writing-mode: vertical-rl;
+    }
+}
+.p-title-2{
+    width: calc(210 / 341 * 100%);
+    letter-spacing: 10px;
+    font-family: global.$ff-java;
+    height: 204px;
+    margin-top: 72px;
+    margin-left: auto;
+    padding-left: 3%;
+    @include global.mq(tb) {
+        top: 337px;
+        left: -60px;
+        letter-spacing: 23px;
+    }
+}
+.p-title-3{
+    width: 100%;
+    height: 204px;
+    font-family: global.$ff-java;
+    margin-top: 27px;
+    padding-left: 5%;
+    @include global.mq(tb) {
+        top: 380px;
+        left: 220px;
+        letter-spacing: 12px;
+    }
+}
+

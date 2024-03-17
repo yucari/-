@@ -1,0 +1,133 @@
+@use "../global" as global;
+
+// つかさんアイコンボタン
+.c-button{
+    display: block;
+    width: 28.117595%;
+    height: 100%;
+    height: fit-content;
+    /* transform: rotateX(0deg); */
+    transform: rotate(22deg);
+    position: relative;
+    top: 0;
+    right: 3%;
+
+    img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+}
+//ドロワーつかさんボタン
+.c-entry-btn{
+    display: block;
+    width: calc(400px / 1366px * 100%);
+    height: 120px;
+    background: global.$color-accent-red;
+    color: global.$color-accent-w;
+    position: relative;
+    transition: all;
+    &::before{
+        content:"" ;
+        position: absolute;
+        background: #F4F4F4;
+        width: calc(400px / 1366px * 100%);
+        height: 120px;
+        top: 12px;
+        left: -12px;
+
+    }
+    &::after{
+    content: "";
+    position: absolute;
+
+    }
+    &:hover{
+
+    }
+}
+//ヘッダーPC entryボタン
+
+.c-entry-header-btn{
+    
+    @include global.mq(tb) {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    height: 120px;
+    //letter-spacing: 2.4px;
+    line-height: 1.375;
+    position: relative;
+    width: 400px;
+    }
+
+}
+.c-entry-link{
+    font-family: global.$ff-java;
+    padding: 22px 51px 21px 40px;
+    display: flex;
+    align-items: center;
+    background:global.$color-accent-red;
+    color: global.$color-accent-w;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s;
+    z-index: 1;
+            &::after{
+            content: "";
+            background: url(../../image/arow-icon.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 15px;
+            height: 13px;
+            right: 22px;
+            top: 50%;
+            position: absolute;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+        @include global.mq(tb) {
+            padding: 41px 23.7% 42px 17.2%;
+            &::after{
+                width: 20px;
+                height: 17px;
+            }
+        }
+}
+
+.p-button-wrapper{
+    text-align: center;
+    position: relative;
+}
+//セクション毎 entryボタン
+
+.c-entry-square-btn{
+    padding: 22px 51px 21px 40px;
+    position: relative;
+    background: #F4F4F4;
+    border: 1px solid #333;
+    @include global.mq(tb) {
+    padding:41px 9.27% 42px 6.7%;
+    }
+
+}
+.c-entry-square-link{
+    position: absolute;
+        top: -12px;
+        left: 12px;
+}
+.c-entry-text{
+    color: #FCFCFC;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    display: block;
+    //height: 23px;
+    white-space: nowrap;
+    @include global.mq(tb) {
+        font-size: 24px;
+        font-weight: 700;
+        //letter-spacing: 2.4px;
+    }
+}

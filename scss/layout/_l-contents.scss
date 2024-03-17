@@ -1,0 +1,9 @@
+@use "../global" as global;
+
+.l-contents{
+    display: flex;
+    flex-direction: column;
+    @include global.mq(tb) {
+    flex-direction: row;
+    }
+}

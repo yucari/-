@@ -1,0 +1,17 @@
+
+@use "../global" as global;
+
+.l-title-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding-left: 6%;
+    @include global.mq(tb) {
+        flex-direction: row;
+        gap: 22%;
+        align-items: center;
+        padding-left: 25%;
+        top: 60px;
+    }    
+}
+
+

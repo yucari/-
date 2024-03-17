@@ -1,0 +1,273 @@
+@use "../global" as global;
+@use "../layout" as layout;
+
+.p-company {
+    position: relative;
+
+
+}
+.p-company__line-top{
+    z-index: 1;
+    top: 317px;
+
+}
+
+.p-company__inner {
+
+}
+
+
+.company__title-wrapper {
+    padding-left: 6%;
+
+}
+
+.p-company__section-title {
+    &::before{
+        left: -6%;
+        top: 57%;
+    }
+
+}
+
+.p-company__sub-title {
+    margin-top: 25px;
+
+}
+
+.p-company__contents {
+    margin-top: 40px;
+    @include global.mq(tb) {
+    margin-top: 80px;
+    }
+
+}
+
+.p-company__content {
+    display: flex;
+    width: 100%;
+    @include global.mq(tb) {
+    width: calc(864px / 1024px)*100%;
+    }
+    &:not(:first-child){
+        dt{
+            padding-top: 20px;
+        }
+        dd{
+            padding-top: 20px;
+        }
+    }
+    dt{
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.362;
+        width: calc(79.7px / 341px)*100%;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom:0;
+            left: 0;
+            background: url(../../image/j/j-redline-sp.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 1px;
+
+        }
+        @include global.mq(tb) {
+            width: calc(200px / 862px)*100%;
+            padding-left: calc(40px / 862px)*100%;
+            font-size: 16px;
+            line-height: 1.75;
+            &::before{
+                background: url(../../image/j/j-redline-pc.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+
+    }
+    dd{     
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.362;
+        flex-grow: 1;
+        padding-bottom: 22px;
+        padding-left: calc(15.21px / 341px)*100%;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom:0;
+            left: 0;
+            background: url(../../image/j/j-glaylin-sp.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 1px;
+
+        }
+        @include global.mq(tb) {
+        font-size: 16px;
+        line-height: 1.75;
+        padding-left: calc(40px / 862px)*100%;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom:0;
+            left: 0;
+            background: url(../../image/j/j-grayline-pc.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 1px;
+        }
+        
+        }
+
+    }
+
+}
+.p-company__content {
+    &:not(:first-child){
+        dd{
+
+        }
+    }
+    &:nth-child(1){
+        dt{
+            @include global.mq(tb) {
+            
+            }
+
+        }
+        dd{
+            @include global.mq(tb) {
+            
+            }
+
+        }
+
+    }
+    &:nth-child(2){
+        dt{
+            padding-top: 23px;
+            @include global.mq(tb) {
+            
+            }
+
+        }
+        dd{
+            padding-top: 25px;
+            padding-bottom: 21px;
+            @include global.mq(tb) {
+            
+            }
+
+        }
+        
+    }
+    &:nth-child(3){
+        dt{
+            @include global.mq(tb) {
+            
+            }
+
+        }
+        dd{
+            @include global.mq(tb) {
+            
+            }
+
+        }
+        
+    }
+    &:nth-child(4){
+        dt{
+            padding-top: 19px;
+            @include global.mq(tb) {
+            
+            }
+
+        }
+        dd{
+            padding-top: 19px;
+            @include global.mq(tb) {
+            
+            }
+
+        }
+        
+    }
+    &:nth-child(5){
+        dt{
+            @include global.mq(tb) {
+            
+            }
+
+        }
+        dd{
+            @include global.mq(tb) {
+            
+            }
+
+        }
+        
+    }
+    &:nth-child(6){
+        dt{
+            padding-top: 21px;
+            
+            @include global.mq(tb) {
+                padding-left: calc(41px / 862px)*100%;
+            }
+
+        }
+        dd{
+            padding-top: 21px;
+            @include global.mq(tb) {
+            
+            }
+
+        }
+        
+    }
+    &:nth-child(7){
+        dt{
+            
+            @include global.mq(tb) {
+                padding-left: calc(38px / 862px)*100%;
+            }
+
+        }
+        dd{
+            padding-top: 20.5px;
+            padding-bottom: 20.5px;
+            @include global.mq(tb) {
+            
+            }
+
+        }
+        
+    }
+    &:nth-child(8){
+        dt{
+            
+            @include global.mq(tb) {
+                padding-left: calc(38px / 3862px)*100%;
+            }
+
+        }
+        dd{
+            padding-bottom: 21px;
+            @include global.mq(tb) {
+            
+            }
+
+        }
+        
+    }
+}
+

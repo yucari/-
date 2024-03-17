@@ -1,0 +1,316 @@
+@use "../global" as global;
+@use "../layout" as layout;
+
+.p-job {
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        background: #F4F4F4;
+        width: calc(264px / 375px)*100%;
+        height: 745px;
+        top:0;
+        left: 0;
+        z-index: -2;
+        @include global.mq(tb) {
+        width: calc(812px / 1336px)*100%;
+        height: 1075px;
+        }
+    }
+
+}
+
+.p-job__line-top {
+    top: 290px;
+    @include global.mq(tb) {
+    top: 165px;
+    }
+
+}
+
+.p-job__line-bottom {
+    bottom:-315px;
+    @include global.mq(tb) {
+        background: url(../../image/j/パス\ 14.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    bottom: -148px;
+    height: 688px;
+    left: 0;
+    z-index: 1;
+    }
+
+}
+
+.p-job__inner {
+    padding-bottom: 99.34px;
+    @include global.mq(tb) {
+    padding-top: 160px;
+    padding-bottom: 75.34px 
+    }
+
+}
+
+.p-job__title-wrapper {
+    @include global.mq(tb) {
+    padding-left: 2%;
+    gap: 15.6%;
+    }
+
+}
+.p-job__section-title {
+    @include global.mq(tb) {
+    padding-left: 0;
+    }
+
+}
+.job-span{
+    position: relative;
+    &::after{
+        position: absolute;
+        content:"o";
+        color: global.$color-accent-red;
+        top: 0;
+        left: 10%;
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: 6px;
+        z-index: -1;
+        @include global.mq(tb) {
+            font-size: 100px;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 10px;
+        }
+    }
+}
+
+.p-job__sub-title {
+    margin-top: 25px;
+    @include global.mq(tb) {
+        margin-top: 15px;
+    }
+
+}
+
+.p-job__contents {
+    margin-top: 40px;
+    @include global.mq(tb) {
+    margin-top: 85px;
+    //padding-left: calc(80px / 1024px)*100%;
+    padding-inline:calc((1024px - 864px) / 2);
+    }
+}
+
+.p-job__content {
+    width: 100%;
+    display: flex;
+    dt{
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1.36;
+        width: calc(80px / 341px)*100%;
+        position: relative;
+        z-index: 8;
+        @include global.mq(tb) {
+        padding-left: calc(41px / 865px)*100%;
+        width: calc(200px / 865px)*100%;
+        font-size: 16px;
+        line-height: 1.75;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            background: url(../../image/j/red-line-sp.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 1px;
+            left: 0;
+            bottom: 0;
+            z-index: 10;
+
+        }
+    }
+    dd{
+        font-size: 13px;
+        line-height: 1.362;
+        flex-shrink: 0;
+        padding-left: calc(15px / 341px)*100%;
+        padding-bottom: 22px;
+        position: relative;
+        flex-grow: 1;
+        @include global.mq(tb) {
+            font-size: 16px;
+            line-height: 1.75;
+        padding-bottom: 40px;
+        }
+        &::before{
+            content:"";
+            position: absolute;
+            background: url(../../image/j/j-glaylin-sp.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 1px;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    &:not(:first-child){
+        dt{
+            padding-top: 20px;
+            @include global.mq(tb) {
+            padding-top:40px;
+            }
+            
+        }
+        dd{
+            padding-top: 20px;
+            @include global.mq(tb) {
+            padding-top: 40px;
+            }
+        }
+
+    }
+    &:not(:last-child){
+
+    }
+    &:nth-child(1){
+        dt{
+            @include global.mq(tb) {
+                padding-left: calc(40px / 943px)*100%;
+                }
+        }
+        dd{
+            @include global.mq(tb) {
+            padding-bottom: 39px;
+            }
+        }
+
+    }
+    &:nth-child(2){
+        dt{
+            padding-top: 19px;
+            @include global.mq(tb) {
+                padding-left: calc(42px / 943px)*100%;
+                padding-top: 40px;
+                }
+        }
+        dd{
+            padding-top: 22px;
+            @include global.mq(tb) {
+            padding-top: 41px;
+            padding-bottom: 39px;
+            }
+        }
+    }
+    &:nth-child(3){
+        dt{
+            padding-top: 19px;
+            @include global.mq(tb) {
+                padding-top: 39px;
+            }
+        }
+        dd{
+            padding-top: 22px;
+            @include global.mq(tb) {
+            padding-top: 39px;
+            padding-bottom: 40px;
+            }
+
+        }
+        
+    }
+    &:nth-child(4){
+        dt{
+            padding-top: 20.5px;
+            @include global.mq(tb) {
+            padding-top: 42px;
+            }
+        }
+        dd{
+            @include global.mq(tb) {
+            padding-bottom: 40px;
+            }
+        }
+        
+    }
+    &:nth-child(5){
+        dt{
+            @include global.mq(tb) {
+            padding-top: 39px;
+            }
+            dd{
+                padding-top: 39px;
+                @include global.mq(tb) {
+                padding-bottom: 40px;
+                }
+            }
+        }
+        
+    }
+    &:nth-child(6){
+        dt{
+            @include global.mq(tb) {
+                padding-left: calc(43px / 943px)*100%;
+                padding-top: 39px;
+                }
+        }
+        dd{
+            @include global.mq(tb) {
+            padding-top: 39px;
+            padding-bottom: 40px;
+            }
+        }
+        
+    }
+    &:nth-child(7){
+
+        dd{
+            @include global.mq(tb) {
+            padding-bottom: 39px;
+            }
+        }
+        
+    }
+    &:nth-child(8){
+        dd{
+            @include global.mq(tb) {
+            padding-bottom: 41px;
+            }
+        }
+        
+    }
+    &:nth-child(9){
+        dd{
+            @include global.mq(tb) {
+            padding-top: 40.11px;
+            padding-bottom: 45.99px;
+            }
+        }
+        
+    }
+    &:nth-child(10){
+        dd{
+            @include global.mq(tb) {
+            padding-bottom: 40px;
+            }
+        }
+        
+    }
+
+}
+.p-job__top-button{
+    width: 54%;
+    right: -48%;
+    top: 34px;
+    transform: rotate(36deg);
+    @include global.mq(tb) {
+        width: 19%;
+        right: -92%;
+        top: -63px;
+    }
+}
+

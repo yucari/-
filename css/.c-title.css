@@ -1,0 +1,38 @@
+.c-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.366; /* 82px / 60px = 1.3667 */
+  letter-spacing: 6px;
+  color: color(srgb red green blue);
+  line-height: normal;
+  letter-spacing: 7px;
+  position: relative;
+}
+.c-title::before {
+  content: "";
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: #F45F5F;
+}
+@media screen and (max-width: screen and(max-width: inner-sp-1px)) {
+  .c-title {
+    color: #F45F5F;
+    font-family: "Noto Sans JP";
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 10px;
+  }
+}
+.c-title .c-title span {
+  color: #FCFCFC;
+  font-size: 70px;
+}
+@media screen and (max-width: screen and(max-width: inner-sp-1px)) {
+  .c-title .c-title span {
+    font-size: 100px;
+  }
+}

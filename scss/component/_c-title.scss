@@ -1,0 +1,115 @@
+@use "../global" as global;
+
+.c-section-title{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.366; /* 82px / 60px = 1.3667 */
+    letter-spacing: 6px;
+    color: global.$color-accent-red;
+    line-height: normal;
+    letter-spacing: 6px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    
+    &::before{
+        content:"";
+        position: absolute;
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        background: global.$color-accent-red;
+        z-index: -1;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -6%;
+
+    }
+    @include global.mq(tb) {
+        color: global.$color-accent-red;
+        font-family: "Noto Sans JP";
+        font-size: 100px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 10px;
+        &::before{
+            width: 130px;
+            height: 130px;
+            left: -4%;
+            top: 100%;
+        transform: translateY(-100%);
+        }
+    
+    }
+}
+    .c-section-title span{
+        
+            color: #FCFCFC;
+            font-size: 60px;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 6px;
+            @include global.mq(tb) {
+                font-size: 100px;
+                letter-spacing: 10px;
+            }
+
+        }
+
+    .c-sub-title{
+        font-size: 18px;
+        line-height: 1.362;
+        position: relative;
+        margin-top: 20px;
+        font-weight: 700;
+        height: fit-content;
+        flex-shrink: 0;
+        &::before{
+            content:"";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: global.$color-accent-red;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -6%;
+        }
+        @include global.mq(tb){
+            font-size: 24px;
+            margin-top: 0;
+            &::before{
+                width: 13px;
+                height: 13px;   
+                left: -20%;
+            }
+        }
+
+    }
+    .c-title{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.362;
+        position: relative;
+        padding-left: calc(23px / 341px)*100%;
+        &::before{
+        content: "";
+        position: absolute;
+        background: global.$color-accent-red;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        }
+        @include global.mq(tb) {
+        padding-left: 23px;
+        letter-spacing: -0.6px;
+        padding-left: 4.744868%;
+
+        }
+
+    }

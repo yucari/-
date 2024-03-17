@@ -1,0 +1,42 @@
+//色
+$color-main:#333333;
+$color-sub:#CECDCD;
+$color-accent-red:#F45F5F;
+$color-light-pink:rgba(244,95,95,0.6);
+$color-accent-w:#FCFCFC;
+
+//フォント
+
+$ff-base: 'Noto Sans JP', sans-serif;
+$ff-java: 'Noto Sans Javanese', sans-serif;
+$ff-potta:'Potta One', system-ui;
+
+
+
+$fs-base: 16px;
+$fw-base: 400;
+$lh-base: 1.75; //行間28px;
+
+//インナー
+
+$sp: 375;
+$tb: 768;
+$pc: 1024;
+$lg: 1365;
+
+//ブレークポイント
+
+$breakpoints: (
+  "sp": "(min-width: #{$sp}px)",
+  "tb": "(min-width: #{$tb}px)",
+  "pc": "(min-width: #{$pc}px)",
+  "lg": "(min-width: #{$lg}px)",
+  ) !default;
+
+  @mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+  
+
